@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> 
+    <body>
+        <p style="font-weight: bold;">안녕하세요</p>
+        <p>가장 잘생긴 사람은</p>
+        <p id="name">ㅇㅇㅇ</p> 
+        <p>입니다</p>
+
+        <select id="nameSelect">
+            <option>장동건</option>
+            <option>원빈</option>
+            <option>강동원</option>
+        </select>
+
+        <button onclick="nameChange()">이름넣기1</button>
+        <button id="updateName">이름넣기2</button>
+
+        <script>
+            console.log("javascript로 element 편집"); // console에 log를 찍어라 // -> 브라우저 콘솔창에 띄움
+
+            // 1번 - 사용자가 버튼을 클릭했을 때 namechange() 실행
+            function nameChange(){
+                var nameSelectElement = document.querySelector("#nameSelect");
+                var nameElement = document.querySelector("#name"); // 편집 대상 id 선택(쿼리 기반)
+                nameElement.innerHTML = nameSelectElement.value; // innerHTML 안쪽 내용을 바꾸고 싶을 때 사용
+            }
+            console.log(nameElement) // 브라우저는 위에서 아래로 해석 -> id="name"이 앞에 있어야 함
+            
+            // 2번
+            const updateNameButton = document.querySelector("#updateName");
+            updateNameButton.addEventListener("click", nameChange); // click할 때 nameChange() 호출(두번째 방법)
+
+            // // 더하기 함수 만들기
+            // function sum(x, y) {
+            //     return x + y;
+            // }
+            // var x = 5;
+            // var y = 7;
+            // x = 10;
+            // var result = x + y;
+            // console.log(result);
+
+        </script>
+    </body>
+</html>

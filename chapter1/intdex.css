@@ -1,0 +1,13 @@
+p {
+        color: red;
+        font-weight: bold;
+        font-size: large;
+        margin-left: 50px;
+    }
+.blueXlargeLargeFont{
+        color: blue;
+        font-size: x-large;
+    }
+#name{
+        color: black;
+    }
